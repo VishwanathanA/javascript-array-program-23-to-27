@@ -51,5 +51,20 @@ const arr3 = [1, 2, 4];
 console.log("arr1 : "+arr1);
 console.log("arr2 : "+arr2);
 console.log("arr3 : "+arr3);
-console.log("arr1 === arr2 : "+(arr1 === arr2));
-console.log("arr1 === arr3 : "+(arr1 === arr3));
+function check(a1,a2){
+    c=0;
+    if(a1.length!==a2.length){
+        return false
+    }
+    for(let i=0;i<a1.length;i++){
+        if(a1[i]==a2[i]){
+            c++;
+        }
+    }
+    if(c==a1.length)
+        return true;
+    else
+        return false;
+}
+console.log("arr1 == arr2 : "+check(arr1,arr2));
+console.log("arr1 == arr3 : "+check(arr1,arr3));
